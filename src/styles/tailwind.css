@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FAFAFA; /* warm off-white */
+    --color-foreground: #1F2937; /* rich charcoal */
+    --color-border: #E5E7EB; /* light gray */
+    --color-input: #FFFFFF; /* pure white */
+    --color-ring: #1E40AF; /* deep blue */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* pure white */
+    --color-card-foreground: #1F2937; /* rich charcoal */
+    
+    /* Popover Colors */
+    --color-popover: #FFFFFF; /* pure white */
+    --color-popover-foreground: #1F2937; /* rich charcoal */
+    
+    /* Muted Colors */
+    --color-muted: #F9FAFB; /* very light gray */
+    --color-muted-foreground: #6B7280; /* balanced gray */
+    
+    /* Primary Colors */
+    --color-primary: #1E40AF; /* deep blue */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #64748B; /* sophisticated slate gray */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Destructive Colors */
+    --color-destructive: #DC2626; /* clear red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #059669; /* confident emerald */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #10B981; /* vibrant emerald */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #F59E0B; /* warm amber */
+    --color-warning-foreground: #1F2937; /* rich charcoal */
+    
+    /* Error Colors */
+    --color-error: #DC2626; /* clear red */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Surface Colors */
+    --color-surface: #FFFFFF; /* pure white */
+    --color-text-primary: #1F2937; /* rich charcoal */
+    --color-text-secondary: #6B7280; /* balanced gray */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-in {
+    animation: animate-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animate-out {
+    animation: animate-out 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes animate-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+}
